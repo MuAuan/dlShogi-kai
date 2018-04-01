@@ -1,0 +1,25 @@
+C:\Users\user>python -m pydlshogi.usi.usi_policy_value_bn_player
+usi
+id name policy_value_player_bn
+option name modelfile type string default C:\Users\user\chainer-3.5.0\dlShogi\model\model_policy_value_bn
+usiok
+setoption name modelfile value C:\Users\user\chainer-3.5.0\dlShogi\model\model_policy_value9_bn_2016-2017
+isready
+readyok
+position startpos
+lnsgkgsnl/1r5b1/ppppppppp/9/9/9/PPPPPPPPP/1B5R1/LNSGKGSNL b - 1
+go
+C:\Users\user\Anaconda3\lib\site-packages\chainer\functions\normalization\batch_normalization.py:65: UserWarning: A batch with no more than one sample has been given to F.batch_normalization. F.batch_normalization will always output a zero tensor for such batches. This could be caused by incorrect configuration in your code (such as running evaluation while chainer.config.train=True), but could also happen in the last batch of training if non-repeating iterator is used.
+  UserWarning)
+Traceback (most recent call last):
+  File "C:\Users\user\Anaconda3\lib\runpy.py", line 184, in _run_module_as_main
+    "__main__", mod_spec)
+  File "C:\Users\user\Anaconda3\lib\runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "c:\users\user\chainer-3.5.0\dlshogi\pydlshogi\usi\usi_policy_value_bn_player.py", line 5, in <module>
+    usi(player)
+  File "c:\users\user\chainer-3.5.0\dlshogi\pydlshogi\usi\usi.py", line 19, in usi
+    player.go()
+  File "c:\users\user\chainer-3.5.0\dlshogi\pydlshogi\player\policy_value_bn_player.py", line 58, in go
+    logits = cuda.to_cpu(y.data)[0]
+AttributeError: 'tuple' object has no attribute 'data'
